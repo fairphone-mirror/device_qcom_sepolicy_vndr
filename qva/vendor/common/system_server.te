@@ -103,3 +103,6 @@ get_prop(system_server, vendor_qspm_prop)
 
 get_prop(system_server, vendor_xlat_prop)
 
+#allow access to fingerprintd data file
+allow system_server fingerprintd_data_file:file { r_file_perms unlink };
+allow system_server fingerprintd_data_file:dir { rw_dir_perms rmdir };
