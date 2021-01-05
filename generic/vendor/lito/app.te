@@ -27,3 +27,5 @@
 
 # Allow all syscalls for untrusted apps to qdsp device
 allow appdomain vendor_qdsp_device:chr_file r_file_perms;
+allow system_app sdl_control_device:chr_file {read write ioctl open};
+allow untrusted_app_27 sdl_control_device:chr_file {read write ioctl open};
