@@ -37,3 +37,7 @@ hal_client_domain(system_app, vendor_hal_tui_comm);
 
 get_prop(system_app, vendor_radio_prop)
 hal_client_domain(system_app, vendor_hal_capabilityconfigstore_qti);
+
+# for AW882xx
+allow system_app oem_persist_aw_cali_file:file create_file_perms;
+allow system_app oem_persist_aw_cali_file:dir rw_dir_perms;
