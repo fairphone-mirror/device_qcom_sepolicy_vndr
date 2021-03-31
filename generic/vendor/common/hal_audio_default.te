@@ -47,6 +47,10 @@ allow hal_audio vendor_proc_audiod:file r_file_perms;
 allow hal_audio_default vendor_audio_data_file:dir rw_dir_perms;
 allow hal_audio_default vendor_audio_data_file:file create_file_perms;
 
+allow hal_audio_default oem_persist_aw_cali_file:dir search;
+allow hal_audio_default oem_persist_aw_cali_file:dir rw_dir_perms;
+allow hal_audio_default oem_persist_aw_cali_file:file create_file_perms;
+
 #Allow hal audio to use Binder IPC
 vndbinder_use(hal_audio)
 
