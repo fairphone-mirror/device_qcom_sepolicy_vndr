@@ -41,3 +41,12 @@ hal_client_domain(system_app, vendor_hal_capabilityconfigstore_qti);
 # for AW882xx
 allow system_app oem_persist_aw_cali_file:file create_file_perms;
 allow system_app oem_persist_aw_cali_file:dir rw_dir_perms;
+
+#LeadCore fingerprint start
+allow system_app fpsensor_data_file:sock_file { write };
+allow system_app fpsensor_data_file:dir { search };
+allow system_app hal_fingerprint_default:fd {use};
+
+#qiancheng@wind-mobi.com 20171028 add -s
+#allow system_app vendor_file:file { execute read open ioctl getattr};
+#LeadCore fingerprint end

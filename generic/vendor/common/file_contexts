@@ -75,6 +75,10 @@
 /dev/synx_device                                u:object_r:vendor_synx_device:s0
 /dev/ipa_odl_ctl                                u:object_r:vendor_ipa_dev:s0
 /dev/ipa_adpl                                   u:object_r:vendor_ipa_dev:s0
+#LeadCore fingerprint start
+/dev/fpsensor                                   u:object_r:fpsensor_fp_device:s0
+/data/fpsensor(/.*)?                            u:object_r:fpsensor_data_file:s0
+#LeadCore fingerprint end
 
 # dev socket nodes
 /dev/socket/chre                                u:object_r:vendor_chre_socket:s0
