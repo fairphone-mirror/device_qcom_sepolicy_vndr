@@ -5,6 +5,7 @@ allow hal_fingerprint_default fuse:dir {search};
 allow hal_fingerprint_default mnt_user_file:dir {search};
 allow hal_fingerprint_default mnt_user_file:lnk_file {read};
 allow hal_fingerprint_default storage_file:lnk_file {read};
+allow hal_fingerprint_default tee_device:chr_file { read write ioctl open };
 
 #add for fpsensor fingerprint gesture
 #allow hal_fingerprint_default uhid_device:chr_file {open ioctl write read};
