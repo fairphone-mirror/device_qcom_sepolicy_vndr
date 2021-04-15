@@ -53,3 +53,9 @@ allow system_app hal_fingerprint_default:fd {use};
 
 #mmitest
 r_dir_file(system_app, vendor_sysfs_usb_supply)
+
+#MMITest
+allow system_app vendor_firmware_file:dir { search };
+#allow system_app vendor_firmware_file:file { read open getattr };
+allow system_app vendor_sysfs_battery_supply:dir { search };
+allow system_app vendor_sysfs_battery_supply:file { read open getattr };
