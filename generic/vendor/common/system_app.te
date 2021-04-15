@@ -50,3 +50,6 @@ allow system_app hal_fingerprint_default:fd {use};
 #qiancheng@wind-mobi.com 20171028 add -s
 #allow system_app vendor_file:file { execute read open ioctl getattr};
 #LeadCore fingerprint end
+
+#mmitest
+r_dir_file(system_app, vendor_sysfs_usb_supply)
