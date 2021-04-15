@@ -80,4 +80,30 @@ ifneq (,$(filter sdm845 sdm710, $(TARGET_BOARD_PLATFORM)))
       BOARD_SEPOLICY_DIRS += $(SEPOLICY_PATH)/legacy/vendor/test/mst_test_app
     endif
 endif
+
+
+############## + add t2m sepolicy path ###################
+#liquan.zhou.t2m,20210414
+
+T2M_SEPOLICY_PATH := device/qcom/lito/sepolicy
+
+#### sepolicy in /system_ext
+BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
+	$(T2M_SEPOLICY_PATH)/public
+
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
+	$(T2M_SEPOLICY_PATH)/private
+
+#### sepolicy in /product
+PRODUCT_PUBLIC_SEPOLICY_DIRS += \
+	$(T2M_SEPOLICY_PATH)/product/public
+
+PRODUCT_PRIVATE_POLICY += \
+	$(T2M_SEPOLICY_PATH)/product/private
+
+#### sepolicy in /vendor
+BOARD_SEPOLICY_DIRS += \
+	$(T2M_SEPOLICY_PATH)/vendor
+
+############## - add t2m sepolicy path ###################
 endif
