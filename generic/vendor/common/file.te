@@ -244,4 +244,3 @@ type oem_persist_aw_cali_file, file_type;
 type fpsensor_data_file, file_type, data_file_type, core_data_file_type;
 #LeadCore fingerprint end
 
-type sysfs_t2m_mmi,  sysfs_type, fs_type ,data_file_type;
