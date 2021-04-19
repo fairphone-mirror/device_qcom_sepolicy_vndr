@@ -530,3 +530,6 @@
 /vendor/bin/embmsslServer       u:object_r:vendor_hal_embmssl_qti_exec:s0
 
 /mnt/vendor/persist/factory/audio(/.*)?      u:object_r:oem_persist_aw_cali_file:s0
+
+#MMITest
+/proc/android_touch/self_test  u:object_r:tct_mmitest_sysfs:s0
