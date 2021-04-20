@@ -29,3 +29,6 @@ allow platform_app     fp_ext_svc2_service:hwservice_manager {find};
 allow system_app     fp_ext_svc2_service:hwservice_manager {find};
 allow hal_fingerprint_default system_app:binder { call };
 
+allow tctmmi_app     fp_ext_svc2_service:hwservice_manager {find};
+allow hal_fingerprint_default tctmmi_app:binder { call };
+
