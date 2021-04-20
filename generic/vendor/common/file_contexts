@@ -533,4 +533,5 @@
 
 #MMITest
 /proc/android_touch/self_test  u:object_r:tct_mmitest_sysfs:s0
-sys/class/udc/a600000.dwc3/current_speed u:object_r:sysfs_t2m_mmi:s0
+sys/devices/platform/soc/a600000.ssusb/a600000.dwc3/udc/a600000.dwc3/current_speed u:object_r:tct_mmitest_sysfs:s0
+sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/power_supply/usb/typec_cc_orientation u:object_r:tct_mmitest_sysfs:s0
