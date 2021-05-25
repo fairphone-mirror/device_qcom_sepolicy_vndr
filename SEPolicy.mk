@@ -21,6 +21,14 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR := \
     $(BOARD_PLAT_PRIVATE_SEPOLICY_DIR) \
     $(QSSI_SEPOLICY_PATH)/qva/private
 
+#if defined(PXLW_IRIS)
+ifeq ($(findstring PXLW_IRIS,$(IRIS_CFLAGS)),PXLW_IRIS)
+    BOARD_SEPOLICY_DIRS += \
+       vendor/pixelworks/irisdbgd/sepolicy \
+       vendor/pixelworks/libirisservice/sepolicy
+endif
+#endif /* defined(PXLW_IRIS) */
+
 #once all the services are moved to Product /ODM above lines will be removed.
 # sepolicy rules for product images
 PRODUCT_PUBLIC_SEPOLICY_DIRS := \
@@ -57,6 +65,7 @@ ifeq (,$(filter sdm845 sdm710, $(TARGET_BOARD_PLATFORM)))
       BOARD_SEPOLICY_DIRS += $(SEPOLICY_PATH)/qva/vendor/test/mst_test_app
     endif
 endif
+
 
 #[BUGFIX]-MOD-BEGIN by T2M.ZhangJie,12/08/2020,10277814,
 BOARD_SEPOLICY_DIRS += $(SEPOLICY_PATH)/nfc/vendor
