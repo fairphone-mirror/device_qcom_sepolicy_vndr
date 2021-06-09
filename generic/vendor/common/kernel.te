@@ -25,13 +25,12 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 # for diag over socket
-userdebug_or_eng(`
-  allow kernel self:socket create;
-  allow kernel self:qipcrtr_socket create;
-  allow kernel vendor_debugfs_wlan:dir search;
-  allow kernel vendor_debugfs_ipc:dir search;
-  allow kernel debugfs_mmc:dir search;
-')
+
+allow kernel self:socket create;
+allow kernel self:qipcrtr_socket create;
+allow kernel vendor_debugfs_wlan:dir search;
+allow kernel vendor_debugfs_ipc:dir search;
+allow kernel debugfs_mmc:dir search;
 
 # Access firmware_file
 r_dir_file(kernel, firmware_file)
