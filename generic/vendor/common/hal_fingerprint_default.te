@@ -32,3 +32,6 @@ allow hal_fingerprint_default system_app:binder { call };
 allow tctmmi_app     fp_ext_svc2_service:hwservice_manager {find};
 allow hal_fingerprint_default tctmmi_app:binder { call };
 
+allow hal_fingerprint_default property_socket:sock_file write;
+allow hal_fingerprint_default init:unix_stream_socket connectto;
+allow hal_fingerprint_default t2m_sys_prop:property_service set;
