@@ -531,7 +531,4 @@
 
 /mnt/vendor/persist/factory/audio(/.*)?      u:object_r:oem_persist_aw_cali_file:s0
 
-#MMITest
-/proc/android_touch/self_test  u:object_r:tct_mmitest_sysfs:s0
-sys/devices/platform/soc/a600000.ssusb/a600000.dwc3/udc/a600000.dwc3/current_speed u:object_r:tct_mmitest_sysfs:s0
-sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/power_supply/usb/typec_cc_orientation u:object_r:tct_mmitest_sysfs:s0
+
