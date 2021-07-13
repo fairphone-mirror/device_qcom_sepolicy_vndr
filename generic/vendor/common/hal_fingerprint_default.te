@@ -34,4 +34,4 @@ allow hal_fingerprint_default tctmmi_app:binder { call };
 
 allow hal_fingerprint_default property_socket:sock_file write;
 allow hal_fingerprint_default init:unix_stream_socket connectto;
-allow hal_fingerprint_default t2m_sys_prop:property_service set;
+allow hal_fingerprint_default vendor_t2m_sys_prop:property_service set;
