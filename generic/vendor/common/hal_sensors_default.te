@@ -63,3 +63,6 @@ hal_client_domain(hal_sensors_default, hal_graphics_allocator)
 
 # allow to read adsprpc related properties
 get_prop(hal_sensors_default, vendor_adsprpc_prop)
+
+# LEDs
+allow hal_sensors_default sysfs_leds:file r_file_perms;
