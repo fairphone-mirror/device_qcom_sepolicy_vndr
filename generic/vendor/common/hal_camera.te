@@ -36,6 +36,8 @@ hal_client_domain(hal_camera_default, vendor_hal_perf)
 
 set_prop(hal_camera, vendor_camera_prop)
 
+get_prop(hal_camera, debug_prop)
+
 # ignore spurious denial
 dontaudit hal_camera graphics_device:dir search;
 
