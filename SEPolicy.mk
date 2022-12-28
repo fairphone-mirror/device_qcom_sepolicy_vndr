@@ -58,6 +58,12 @@ ifeq (,$(filter sdm845 sdm710, $(TARGET_BOARD_PLATFORM)))
     endif
 endif
 
+
+#[BUGFIX]-MOD-BEGIN by T2M.ZhangJie,12/08/2020,10277814,
+BOARD_SEPOLICY_DIRS += $(SEPOLICY_PATH)/nfc/vendor
+#[BUGFIX]-MOD-END by T2M.ZhangJie
+
+
 ifneq (,$(filter sdm845 sdm710, $(TARGET_BOARD_PLATFORM)))
     BOARD_SEPOLICY_DIRS := \
                  $(BOARD_SEPOLICY_DIRS) \
