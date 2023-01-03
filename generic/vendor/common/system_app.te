@@ -28,10 +28,6 @@
 allow system_app vendor_elabel_data_file:dir r_dir_perms;
 allow system_app vendor_elabel_data_file:file r_file_perms;
 
-# for AW882xx
-#allow system_app vendor_persist_aw_cali_file:file create_file_perms;
-#allow system_app vendor_persist_aw_cali_file:dir rw_dir_perms;
-
 # Allow hbtp hal Service to be found
 hal_client_domain(system_app, vendor_hal_hbtp)
 
