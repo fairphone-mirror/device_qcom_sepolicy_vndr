@@ -33,6 +33,10 @@ userdebug_or_eng(`
   allow kernel debugfs_mmc:dir search;
 ')
 
+# for AW882xx
+#allow kernel vendor_persist_aw_cali_file:file create_file_perms;
+#allow kernel vendor_persist_aw_cali_file:dir create_dir_perms;
+
 # Access firmware_file
 r_dir_file(kernel, firmware_file)
 
