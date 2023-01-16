@@ -1,0 +1,37 @@
+#LeadCore fingerprint start
+#allow hal_fingerprint_default to access /dev/fpsensor
+allow hal_fingerprint_default fpsensor_fp_device:chr_file { open read write ioctl};
+allow hal_fingerprint_default fuse:dir {search};
+allow hal_fingerprint_default mnt_user_file:dir {search};
+allow hal_fingerprint_default mnt_user_file:lnk_file {read};
+allow hal_fingerprint_default storage_file:lnk_file {read};
+allow hal_fingerprint_default tee_device:chr_file { read write ioctl open };
+
+#add for fpsensor fingerprint gesture
+#allow hal_fingerprint_default uhid_device:chr_file {open ioctl write read};
+
+#add for fpsensor test socket connection
+#allow untrusted_app fpsensor_fp_device:chr_file {open write read ioctl};
+#allow hal_fingerprint_default fpsensor_data_file:sock_file {create setattr unlink};
+#allow hal_fingerprint_default fpsensor_data_file:dir {write read add_name remove_name search setattr};
+
+#add for test tool
+#type fp_ext_svc2_service, hwservice_manager_type;
+#allow hal_fingerprint_default  fp_ext_svc2_service:hwservice_manager {add};
+#allow system_app     fp_ext_svc2_service:hwservice_manager {find};
+#allow hal_fingerprint_default system_data_file:dir {write read};
+#LeadCore fingerprint end
+
+#MMITest
+type fp_ext_svc2_service, hwservice_manager_type;
+allow hal_fingerprint_default  fp_ext_svc2_service:hwservice_manager {add};
+allow platform_app     fp_ext_svc2_service:hwservice_manager {find};
+allow system_app     fp_ext_svc2_service:hwservice_manager {find};
+allow hal_fingerprint_default system_app:binder { call };
+
+allow tctmmi_app     fp_ext_svc2_service:hwservice_manager {find};
+allow hal_fingerprint_default tctmmi_app:binder { call };
+
+allow hal_fingerprint_default property_socket:sock_file write;
+allow hal_fingerprint_default init:unix_stream_socket connectto;
+allow hal_fingerprint_default vendor_t2m_sys_prop:property_service set;

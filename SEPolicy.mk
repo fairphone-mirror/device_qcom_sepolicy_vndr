@@ -21,6 +21,14 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR := \
     $(BOARD_PLAT_PRIVATE_SEPOLICY_DIR) \
     $(QSSI_SEPOLICY_PATH)/qva/private
 
+#if defined(PXLW_IRIS)
+ifeq ($(findstring PXLW_IRIS,$(IRIS_CFLAGS)),PXLW_IRIS)
+    BOARD_SEPOLICY_DIRS += \
+       vendor/pixelworks/irisdbgd/sepolicy \
+       vendor/pixelworks/libirisservice/sepolicy
+endif
+#endif /* defined(PXLW_IRIS) */
+
 #once all the services are moved to Product /ODM above lines will be removed.
 # sepolicy rules for product images
 PRODUCT_PUBLIC_SEPOLICY_DIRS := \
@@ -58,6 +66,11 @@ ifeq (,$(filter sdm845 sdm710, $(TARGET_BOARD_PLATFORM)))
     endif
 endif
 
+
+#[BUGFIX]-MOD-BEGIN by T2M.ZhangJie,12/08/2020,10277814,
+BOARD_SEPOLICY_DIRS += $(SEPOLICY_PATH)/nfc/vendor
+#[BUGFIX]-MOD-END by T2M.ZhangJie
+
 ifneq (,$(filter sdm845 sdm710, $(TARGET_BOARD_PLATFORM)))
     BOARD_SEPOLICY_DIRS := \
                  $(BOARD_SEPOLICY_DIRS) \
@@ -76,4 +89,30 @@ ifneq (,$(filter sdm845 sdm710, $(TARGET_BOARD_PLATFORM)))
       BOARD_SEPOLICY_DIRS += $(SEPOLICY_PATH)/legacy/vendor/test/mst_test_app
     endif
 endif
+
+
+############## + add t2m sepolicy path ###################
+#liquan.zhou.t2m,20210414
+
+T2M_SEPOLICY_PATH := device/qcom/lito/sepolicy
+
+#### sepolicy in /system_ext
+BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
+	$(T2M_SEPOLICY_PATH)/public
+
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
+	$(T2M_SEPOLICY_PATH)/private
+
+#### sepolicy in /product
+PRODUCT_PUBLIC_SEPOLICY_DIRS += \
+	$(T2M_SEPOLICY_PATH)/product/public
+
+PRODUCT_PRIVATE_POLICY += \
+	$(T2M_SEPOLICY_PATH)/product/private
+
+#### sepolicy in /vendor
+BOARD_SEPOLICY_DIRS += \
+	$(T2M_SEPOLICY_PATH)/vendor
+
+############## - add t2m sepolicy path ###################
 endif

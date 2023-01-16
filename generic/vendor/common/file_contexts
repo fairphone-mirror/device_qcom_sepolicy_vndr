@@ -75,6 +75,10 @@
 /dev/synx_device                                u:object_r:vendor_synx_device:s0
 /dev/ipa_odl_ctl                                u:object_r:vendor_ipa_dev:s0
 /dev/ipa_adpl                                   u:object_r:vendor_ipa_dev:s0
+#LeadCore fingerprint start
+/dev/fpsensor                                   u:object_r:fpsensor_fp_device:s0
+/data/fpsensor(/.*)?                            u:object_r:fpsensor_data_file:s0
+#LeadCore fingerprint end
 
 # dev socket nodes
 /dev/socket/chre                                u:object_r:vendor_chre_socket:s0
@@ -527,3 +531,7 @@
 /(vendor|system/vendor)/bin/vendor_modprobe\.sh        u:object_r:vendor_modinstall-sh_exec:s0
 
 /vendor/bin/embmsslServer       u:object_r:vendor_hal_embmssl_qti_exec:s0
+
+/mnt/vendor/persist/factory/audio(/.*)?      u:object_r:oem_persist_aw_cali_file:s0
+
+

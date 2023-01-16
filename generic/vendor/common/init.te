@@ -78,6 +78,10 @@ allow init vendor_sysfs_boot_adsp:file w_file_perms;
 allow init bt_firmware_file:filesystem getattr;
 allow init firmware_file:filesystem getattr;
 
+#LeadCore fingerprint start
+allow init fpsensor_fp_device:chr_file {write};
+#LeadCore fingerprint end
+
 # Search and write access for vendor_sysfs_graphics for backlight in recovery
 recovery_only(`
 allow init vendor_sysfs_graphics:file w_file_perms;

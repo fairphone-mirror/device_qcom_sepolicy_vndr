@@ -133,6 +133,13 @@ allow vendor_hal_perf_default surfaceflinger:process setsched;
 allow vendor_hal_perf_default hal_graphics_composer_default:process setsched;
 allow vendor_hal_perf_default self:capability { sys_nice setuid };
 
+#MMITest fingerprint
+allow vendor_hal_perf_default system_server:file { read open getattr };
+allow vendor_hal_perf_default system_server:dir { search };
+
+allow vendor_hal_perf_default tctmmi_app:file { read open getattr };
+allow vendor_hal_perf_default tctmmi_app:dir { search };
+
 # Rule for vndbinder usage
 allow vendor_hal_perf vendor_qdisplay_service:service_manager find;
 vndbinder_use(vendor_hal_perf);

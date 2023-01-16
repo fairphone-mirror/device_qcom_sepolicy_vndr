@@ -236,3 +236,12 @@ type vendor_sysfs_devicetree_soc, sysfs_type, fs_type;
 
 # for qfprom0 node access
 type vendor_sysfs_qfprom, fs_type, sysfs_type;
+
+# for AW882xx cali file
+type oem_persist_aw_cali_file, file_type;
+
+
+#LeadCore fingerprint start
+type fpsensor_data_file, file_type, data_file_type, core_data_file_type;
+#LeadCore fingerprint end
+
