@@ -26,6 +26,10 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 allow cameraserver gpu_device:chr_file rw_file_perms;
 
+#Begin zihao.li for [Task][FP5-162] FP5 sync tct framework code on 20230206
+set_prop(cameraserver, debug_prop)
+#End   zihao.li for [Task][FP5-162] FP5 sync tct framework code on 20230206
+
 get_prop(cameraserver, vendor_camera_prop)
 
 allow cameraserver vendor_sysfs_camera:file r_file_perms;
