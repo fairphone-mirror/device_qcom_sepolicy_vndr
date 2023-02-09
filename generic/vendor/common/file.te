@@ -237,3 +237,7 @@ type vendor_sysfs_devicetree_soc, sysfs_type, fs_type;
 
 # for qfprom0 node access
 type vendor_sysfs_qfprom, fs_type, sysfs_type;
+
+# for tof cali
+type persist_camera_file, file_type;
+
