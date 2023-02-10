@@ -41,3 +41,13 @@ hal_client_domain(system_app, vendor_hal_tui_comm);
 
 get_prop(system_app, vendor_radio_prop)
 hal_client_domain(system_app, vendor_hal_capabilityconfigstore_qti);
+
+#begin add by ersen.shang for T9733010 austin camera bring up
+allow system_app tct_mmitest_sysfs:file { rw_file_perms };
+allow system_app tct_mmitest_sysfs:dir { search open read };
+#end   add by ersen.shang for T9733010 austin camera bring up
+
+#added by xuanfeng.ye for mmitest calibration on 20210422 begin
+allow system_app vendor_camera_data_file:dir { search };
+allow system_app vendor_camera_data_file:file { getattr open read };
+#added by xuanfeng.ye for mmitest calibration on 20210422 end

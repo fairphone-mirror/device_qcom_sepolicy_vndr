@@ -26,7 +26,14 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 vndbinder_use(hal_camera_default);
 allow hal_camera_default vl53l1_device:chr_file rw_file_perms;
+
 # for tof cali
 allow hal_camera_default persist_camera_file:dir w_dir_perms;
 allow hal_camera_default persist_camera_file:file create_file_perms;
 allow hal_camera_default mnt_vendor_file:dir search;
+
+#add 2020922 by xiaorong.ling for task9989364
+get_prop(hal_camera_default, debug_prop);
+
+allow hal_camera_default tct_mmitest_sysfs:file { rw_file_perms };
+allow hal_camera_default tct_mmitest_sysfs:dir { search open read };
