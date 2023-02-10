@@ -241,3 +241,7 @@ type vendor_sysfs_qfprom, fs_type, sysfs_type;
 # for tof cali
 type persist_camera_file, file_type;
 
+#begin add by ersen.shang for T9733010 austin camera bring up
+type tct_mmitest_sysfs, fs_type, sysfs_type;
+type tct_mmitest_proc, fs_type, proc_type;
+#end   add by ersen.shang for T9733010 austin camera bring up
