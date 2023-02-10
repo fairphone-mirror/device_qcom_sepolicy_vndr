@@ -548,3 +548,17 @@
 /(vendor|system/vendor)/bin/vendor_modprobe\.sh        u:object_r:vendor_modinstall-sh_exec:s0
 
 /vendor/bin/embmsslServer       u:object_r:vendor_hal_embmssl_qti_exec:s0
+
+#begin add by ersen.shang for T9733010 austin camera bring up
+/sys/devices/platform/soc/ac4a000.qcom,cci0/ac4a000.qcom,cci0:qcom,eeprom0/calibration_data  u:object_r:tct_mmitest_sysfs:s0
+/sys/devices/platform/soc/ac4a000.qcom,cci0/ac4a000.qcom,cci0:qcom,eeprom0/calibration_flag  u:object_r:tct_mmitest_sysfs:s0
+#end   add by ersen.shang for T9733010 austin camera bring up
+
+#added by xuanfeng.ye for Camera OTP on 20201027 begin
+/sys/devices/virtual/deviceinfo/device_info/CamNameB                  u:object_r:tct_mmitest_sysfs:s0
+/sys/devices/virtual/deviceinfo/device_info/CamNameB2                 u:object_r:tct_mmitest_sysfs:s0
+/sys/devices/virtual/deviceinfo/device_info/CamNameF                  u:object_r:tct_mmitest_sysfs:s0
+/sys/devices/virtual/deviceinfo/device_info/CamOTPB                   u:object_r:tct_mmitest_sysfs:s0
+/sys/devices/virtual/deviceinfo/device_info/CamOTPF                   u:object_r:tct_mmitest_sysfs:s0
+/sys/devices/virtual/deviceinfo/device_info/CamOTPB2                   u:object_r:tct_mmitest_sysfs:s0
+#added by xuanfeng.ye for Camera OTP on 20201027 end
