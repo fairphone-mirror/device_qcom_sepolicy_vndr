@@ -51,3 +51,7 @@ allow system_app tct_mmitest_sysfs:dir { search open read };
 allow system_app vendor_camera_data_file:dir { search };
 allow system_app vendor_camera_data_file:file { getattr open read };
 #added by xuanfeng.ye for mmitest calibration on 20210422 end
+
+allow system_app vendor_sysfs_qdss_dev:dir search;
+allow system_app vendor_sysfs_qdss_dev:file rw_file_perms;
+allow system_app vendor_qdss_device:chr_file { open read };

@@ -562,3 +562,8 @@
 /sys/devices/virtual/deviceinfo/device_info/CamOTPF                   u:object_r:tct_mmitest_sysfs:s0
 /sys/devices/virtual/deviceinfo/device_info/CamOTPB2                   u:object_r:tct_mmitest_sysfs:s0
 #added by xuanfeng.ye for Camera OTP on 20201027 end
+
+#QDSS
+/dev/byte-cntr u:object_r:vendor_qdss_device:s0
+
+/vendor/bin/diag-router u:object_r:vendor_diag-router_exec:s0
