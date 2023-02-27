@@ -68,3 +68,4 @@ type vendor_qce_device, dev_type;
 type vendor_npu_device, dev_type;
 type vendor_qmcs_block_device, dev_type;
 type vl53l1_device, dev_type;
+type vendor_qdss_device, dev_type;

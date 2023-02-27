@@ -25,7 +25,7 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-userdebug_or_eng(`
+#userdebug_or_eng(`
   type vendor_diag-router, domain;
   type vendor_diag-router_exec, exec_type, vendor_file_type, file_type;
   init_daemon_domain(vendor_diag-router)
@@ -44,4 +44,4 @@ userdebug_or_eng(`
   allow vendor_diag-router self:capability kill;
   allow vendor_diag-router su:process signal;
   allow { domain -coredomain -hal_configstore -vendor_init} vendor_diag-router:unix_stream_socket connectto;
-')
+#')
