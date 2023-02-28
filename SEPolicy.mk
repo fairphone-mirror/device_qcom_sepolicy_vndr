@@ -33,6 +33,14 @@ PRODUCT_PRIVATE_SEPOLICY_DIRS := \
     $(QSSI_SEPOLICY_PATH)/generic/product/private \
     $(QSSI_SEPOLICY_PATH)/qva/product/private
 
+#if defined(PXLW_IRIS)
+ifeq ($(BOARD_HAS_PXLW_IRIS), true)
+    BOARD_SEPOLICY_DIRS += \
+       vendor/pixelworks/irisdbgd/sepolicy \
+       vendor/pixelworks/libirisservice/sepolicy
+endif
+#endif /* defined(PXLW_IRIS) */
+
 ifeq (,$(filter sdm845 sdm710, $(TARGET_BOARD_PLATFORM)))
     BOARD_SEPOLICY_DIRS := \
        $(BOARD_SEPOLICY_DIRS) \
