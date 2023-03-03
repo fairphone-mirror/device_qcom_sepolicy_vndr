@@ -561,7 +561,10 @@
 /sys/devices/virtual/deviceinfo/device_info/CamOTPF                   u:object_r:tct_mmitest_sysfs:s0
 /sys/devices/virtual/deviceinfo/device_info/CamOTPB2                   u:object_r:tct_mmitest_sysfs:s0
 #added by xuanfeng.ye for Camera OTP on 20201027 end
-
+/sys/class/debug_ois/accgain                                         u:object_r:tct_mmitest_sysfs:s0
+/sys/class/debug_ois/afdrift                                         u:object_r:tct_mmitest_sysfs:s0
+/sys/class/debug_ois/oisops                                          u:object_r:tct_mmitest_sysfs:s0
+/sys/class/debug_ois/oisreg                                          u:object_r:tct_mmitest_sysfs:s0
 #QDSS
 /dev/byte-cntr u:object_r:vendor_qdss_device:s0
 
