@@ -35,5 +35,5 @@ allow hal_camera_default mnt_vendor_file:dir search;
 #add 2020922 by xiaorong.ling for task9989364
 get_prop(hal_camera_default, debug_prop);
 
-allow hal_camera_default tct_mmitest_sysfs:file { read write open };
+allow hal_camera_default tct_mmitest_sysfs:file { read write open getattr };
 allow hal_camera_default tct_mmitest_sysfs:dir { search open read };
