@@ -30,3 +30,10 @@ hal_client_domain(priv_app, vendor_hal_perf)
 # TODO(b/123050471): this grants renderscript exec permissions to the
 # priv_app domain
 allow priv_app rs_exec:file rx_file_perms;
+
+# [TCT-CAMERA] Added by shounam.yang for camera apk on 2023-03-28
+allow priv_app vendor_camera_data_file:dir create_dir_perms;
+allow priv_app vendor_camera_data_file:dir rw_dir_perms;
+allow priv_app vendor_camera_data_file:file create_file_perms;
+
+
