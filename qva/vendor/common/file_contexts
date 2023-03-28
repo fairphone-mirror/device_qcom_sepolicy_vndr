@@ -251,3 +251,6 @@
 #wificfr daemon
 /(vendor|system/vendor)/bin/wificfrtool    u:object_r:wificfrsvc_exec:s0
 
+###[ADD][EMKIT]### SystemInformation
+/sys/emkit/info(/.*)?                           u:object_r:vendor_sysfs_info:s0
+
