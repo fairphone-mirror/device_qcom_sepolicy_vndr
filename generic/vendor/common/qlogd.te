@@ -36,6 +36,10 @@ type vendor_qlogd_exec, exec_type, vendor_file_type, file_type;
 
   allow vendor_qlogd vendor_radio_vendor_data_file:file create_file_perms;
   allow vendor_qlogd vendor_radio_vendor_data_file:dir create_dir_perms;
+  
+  allow vendor_qlogd vendor_sysfs_qdss_dev:dir {search};
+  allow vendor_qlogd vendor_sysfs_qdss_dev:file {write open};
+  allow vendor_qlogd vendor_qlogd:capability {setgid setuid};
 
   set_prop(vendor_qlogd, vendor_modem_diag_prop)
 #')
