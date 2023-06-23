@@ -47,6 +47,7 @@ allow vendor_qti_init_shell vendor_sysfs_graphics:file {rw_file_perms setattr};
 allow vendor_qti_init_shell mnt_vendor_file:dir w_dir_perms;
 allow vendor_qti_init_shell mnt_vendor_file:file create_file_perms;
 allow vendor_qti_init_shell vendor_smd_device:chr_file rw_file_perms;
+allow vendor_qti_init_shell vendor_sysfs_qdss_dev:file {setattr write} ;
 
 # Run helpers from / or /system without changing domain.
 allow vendor_qti_init_shell { rootfs vendor_shell_exec }:file execute_no_trans;
