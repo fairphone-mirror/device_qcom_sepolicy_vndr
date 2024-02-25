@@ -126,8 +126,9 @@ allow vendor_qti_init_shell block_device:dir r_dir_perms;
 allow vendor_qti_init_shell swap_block_device:blk_file rw_file_perms;
 
 #For configfs permission
-allow vendor_qti_init_shell configfs:dir r_dir_perms;
-allow vendor_qti_init_shell configfs:file rw_file_perms;
+allow vendor_qti_init_shell configfs:dir create_dir_perms;
+allow vendor_qti_init_shell configfs:file create_file_perms;
+allow vendor_qti_init_shell configfs:lnk_file create_file_perms;
 
 #Allow /sys access to write zram disksize
 allow vendor_qti_init_shell sysfs_zram:dir r_dir_perms;
@@ -183,6 +184,8 @@ allow vendor_qti_init_shell vendor_sysfs_suspend:file w_file_perms;
 set_prop(vendor_qti_init_shell, vendor_soc_id_prop);
 # Set ro.vendor.qti.soc_name to soc_name in QCV init script
 set_prop(vendor_qti_init_shell, vendor_soc_name_prop);
+# Set ro.vendor.qti.soc_model to soc_model in QCV init script
+set_prop(vendor_qti_init_shell, vendor_soc_model_prop);
 
 # Get persist.vendor.console.silent.config for kernel console log level
 get_prop(vendor_qti_init_shell, vendor_console_log_level_prop)

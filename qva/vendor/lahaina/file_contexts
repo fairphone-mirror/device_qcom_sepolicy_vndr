@@ -25,6 +25,10 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+# Changes from Qualcomm Innovation Center are provided under the following license:
+# Copyright (c) 2022-2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.face@1\.0-service    u:object_r:vendor_biometricsface_exec:s0
 
 /data/vendor/face3d_dir(/.*)?                                                      u:object_r:vendor_biometricsface_data_file:s0
@@ -37,3 +41,21 @@
 ###################################
 #camera
 /sys/firmware/devicetree/base/memory/ddr_device_type                               u:object_r:vendor_sysfs_ddr:s0
+
+###################################
+#qwes daemon
+/(vendor|system/vendor)/bin/qwesd                                                  u:object_r:vendor_qwesd_exec:s0
+
+###################################
+# Strongbox-Keymaster HAL 4.1 service
+/vendor/bin/hw/android\.hardware\.keymaster@4\.1-javacard.service                  u:object_r:hal_keymaster_default_exec:s0
+/vendor/bin/init\.qti\.ese\.strongbox\.sh                                          u:object_r:vendor_init-qti-ese-strongbox-sh_exec:s0
+
+#aidirector
+/dev/snd/controlC0  u:object_r:vendor_aid_audio_device:s0
+
+#umd_service
+/vendor/bin/hw/vendor\.qti\.hardware\.umd@1\.0-service                             u:object_r:vendor_hal_umd_qti_exec:s0
+
+#uac
+/dev/snd/pcmC[1-9].*  u:object_r:vendor_pcm_device:s0
