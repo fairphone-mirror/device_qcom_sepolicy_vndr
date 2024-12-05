@@ -26,3 +26,8 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 allow hal_sensors_default vendor_qvrd_vndr:fd use;
+
+###[ADD][EMKIT]###
+allow hal_sensors_default vendor_sysfs_info:dir { search };
+allow hal_sensors_default vendor_sysfs_info:file rw_file_perms;
+###[END][EMKIT]###
