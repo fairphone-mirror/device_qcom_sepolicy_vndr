@@ -314,3 +314,6 @@
 
 #UWB persist files
 /mnt/vendor/persist/uwb(/.*)?    u:object_r:vendor_persist_uwb_file:s0
+
+###[ADD][EMKIT]### SystemInformation
+/sys/emkit/info(/.*)?                           u:object_r:vendor_sysfs_info:s0
