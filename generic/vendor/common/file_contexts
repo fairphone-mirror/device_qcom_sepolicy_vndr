@@ -667,3 +667,5 @@
 
 # CHRE
 /vendor/bin/hw/android\.hardware\.contexthub-service\.qmi                             u:object_r:hal_contexthub_default_exec:s0
+
+/vendor/bin/diag-router u:object_r:vendor_diag-router_exec:s0
