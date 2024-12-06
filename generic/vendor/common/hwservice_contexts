@@ -65,3 +65,4 @@ vendor.qti.hardware.dsp::IDspService                         u:object_r:vendor_h
 vendor.qti.hardware.camera.aon::IAONService                  u:object_r:vendor_hal_camera_aon_hwservice:s0
 vendor.qti.hardware.power.powermodule::IPowerModule          u:object_r:vendor_hal_poweroptservice_hwservice:s0
 vendor.qti.hardware.limits::ILimits                          u:object_r:vendor_hal_limits_hwservice:s0
+vendor.qti.diaghal::Idiag                                    u:object_r:vendor_hal_diaghal_hwservice:s0

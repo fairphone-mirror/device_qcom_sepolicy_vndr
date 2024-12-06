@@ -50,7 +50,7 @@ allow vendor_qcomsysd self:qipcrtr_socket create_socket_perms_no_ioctl;
 use_vendor_per_mgr(vendor_qcomsysd);
 
 #diag
-userdebug_or_eng(`
+#userdebug_or_eng(`
     diag_use(vendor_qcomsysd)
     use_diag_handler_ffbm(vendor_qcomsysd)
     set_prop(vendor_qcomsysd, powerctl_prop)
@@ -59,4 +59,4 @@ userdebug_or_eng(`
     allow vendor_qcomsysd vendor_sysfs_data:file r_file_perms;
     hal_client_domain(vendor_qcomsysd, vendor_hal_diaghal)
     hal_client_domain(vendor_qcomsysd, hal_allocator)
-')
+#')
