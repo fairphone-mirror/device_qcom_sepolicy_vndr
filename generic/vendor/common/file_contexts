@@ -677,3 +677,10 @@
 /sys/devices/virtual/deviceinfo/device_info/CamOTPF                   u:object_r:fp_mmitest_sysfs:s0
 /sys/devices/virtual/deviceinfo/device_info/CamOTPB2                  u:object_r:fp_mmitest_sysfs:s0
 #chengming.xiang add for fp6 mmi dev end
+
+# Begin added by juting.huang for cameraalgoservice porting
+/(vendor|system/vendor)/bin/hw/cameraalgoservice  u:object_r:hal_algoservice_default_exec:s0
+/data/vendor/camera_dump(/.*)? u:object_r:vendor_camera_dump_file:s0
+# End added by juting.huang for cameraalgoservice porting
+
+

@@ -74,4 +74,9 @@ vendor.qti.hardware.data.iwlandata.IIWlan/slot1                       u:object_r
 vendor.qti.hardware.data.iwlandata.IIWlan/slot2                       u:object_r:vendor_hal_iwlan_service:s0
 vendor.qti.hardware.trustedui.ITrustedUI/default                      u:object_r:vendor_hal_trustedui_aidl_service:s0
 vendor.qti.hardware.trustedui.ITrustedInput/default                   u:object_r:vendor_hal_trustedui_aidl_service:s0
+
+# Begin added by juting.huang for cameraalgoservice porting
+vendor.tcl.camera.algoservice.ITctCameraAlgoService/default    u:object_r:vendor_tct_camera_algo_service:s0
+# End added by juting.huang for cameraalgoservice porting
+
 vendor.qti.hardware.dsp.IDspService/default                           u:object_r:vendor_hal_dspmanager_aidlservice:s0
