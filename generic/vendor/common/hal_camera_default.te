@@ -31,3 +31,9 @@ allow hal_camera_default { vendor_sys_sp_comp vendor_sys_nonsp_comp }:file r_fil
 allow hal_camera_default fp_mmitest_sysfs:file { read write open getattr };
 allow hal_camera_default fp_mmitest_sysfs:dir { search open read };
 #chengming.xiang add for fp6 mmi dev end
+
+#Begin added by juting.huang for cameraalgoservice
+allow hal_camera_default vendor_camera_dump_file:file create_file_perms;
+allow hal_camera_default vendor_camera_dump_file:dir create_dir_perms;
+#End added by juting.huang for cameraalgoservice
+

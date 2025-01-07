@@ -30,3 +30,10 @@ hal_client_domain(priv_app, vendor_hal_perf)
 # TODO(b/123050471): this grants renderscript exec permissions to the
 # priv_app domain
 allow priv_app rs_exec:file rx_file_perms;
+
+# Begin added by juting.huang for cameraalgoservice porting
+allow priv_app vendor_tct_camera_algo_service:service_manager find;
+binder_call(priv_app, hal_algoservice_default)
+allow priv_app hal_algoservice_default:binder { call transfer };
+# End added by juting.huang for cameraalgoservice porting
+

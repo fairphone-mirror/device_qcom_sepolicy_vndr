@@ -39,3 +39,8 @@ binder_call(cameraserver, mediacodec)
 
 #allow cameraserver to read adsprpc_prop
 get_prop(cameraserver, vendor_adsprpc_prop)
+
+# Begin added by juting.huang for cameraalgoservice porting
+allow cameraserver vendor_tct_camera_algo_service:service_manager find;
+binder_call(cameraserver, hal_algoservice_default)
+# End added by juting.huang for cameraalgoservice porting
