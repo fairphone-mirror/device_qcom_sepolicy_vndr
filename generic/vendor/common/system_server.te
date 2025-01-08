@@ -96,3 +96,12 @@ allow system_server vendor_nicmd:fd use;
 allow system_server vendor_nicmd:udp_socket { getattr getopt read write };
 
 dontaudit system_server vendor_proc_shs:dir search;
+
+#MMITest server need
+allow system_server vendor_sysfs_usb_supply:dir { search };
+allow system_server vendor_sysfs_usb_supply:file { read open getattr };
+allow system_server vendor_sysfs_battery_supply:file { rw_file_perms };
+allow system_server vendor_mmitest_sysfs:dir { search };
+allow system_server vendor_mmitest_sysfs:file { read getattr open write };
+allow system_server vendor_mmitest_sysfs:file { rw_file_perms };
+allow system_server vendor_sysfs_usb_controller:file { rw_file_perms };
