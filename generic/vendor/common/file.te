@@ -290,3 +290,8 @@ type vendor_nicm_data_file, file_type, data_file_type;
 type vendor_sysfs_cpsk_power, sysfs_type, fs_type;
 
 type vendor_sysfs_sd, fs_type, sysfs_type;
+
+#chengming.xiang add for fp6 mmi dev begin
+type fp_mmitest_sysfs, fs_type, sysfs_type;
+type fp_mmitest_proc, fs_type, proc_type;
+#chengming.xiang add for fp6 mmi dev end
