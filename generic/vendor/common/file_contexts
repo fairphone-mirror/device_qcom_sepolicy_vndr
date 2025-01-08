@@ -669,3 +669,11 @@
 /vendor/bin/hw/android\.hardware\.contexthub-service\.qmi                             u:object_r:hal_contexthub_default_exec:s0
 
 /vendor/bin/diag-router u:object_r:vendor_diag-router_exec:s0
+#chengming.xiang add for fp6 mmi dev begin
+/sys/devices/virtual/deviceinfo/device_info/CamNameB                  u:object_r:fp_mmitest_sysfs:s0
+/sys/devices/virtual/deviceinfo/device_info/CamNameB2                 u:object_r:fp_mmitest_sysfs:s0
+/sys/devices/virtual/deviceinfo/device_info/CamNameF                  u:object_r:fp_mmitest_sysfs:s0
+/sys/devices/virtual/deviceinfo/device_info/CamOTPB                   u:object_r:fp_mmitest_sysfs:s0
+/sys/devices/virtual/deviceinfo/device_info/CamOTPF                   u:object_r:fp_mmitest_sysfs:s0
+/sys/devices/virtual/deviceinfo/device_info/CamOTPB2                  u:object_r:fp_mmitest_sysfs:s0
+#chengming.xiang add for fp6 mmi dev end
