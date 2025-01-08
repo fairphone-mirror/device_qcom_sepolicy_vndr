@@ -1,0 +1,11 @@
+type tctmmi_app, domain;
+
+allow tctmmi_app vendor_sysfs_graphics:dir { search };
+allow tctmmi_app vendor_sysfs_graphics:file rw_file_perms;
+allow tctmmi_app vendor_sysfs_usb_supply:dir { search };
+allow tctmmi_app vendor_sysfs_usb_supply:file rw_file_perms;
+allow tctmmi_app vendor_sysfs_usb_controller:dir { search };
+allow tctmmi_app vendor_sysfs_usb_controller:file rw_file_perms;
+set_prop(tctmmi_app, vendor_sensors_prop)
+set_prop(tctmmi_app, vendor_camera_prop)
+set_prop(tctmmi_app, vendor_audio_prop)
