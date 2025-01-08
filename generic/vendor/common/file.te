@@ -300,3 +300,6 @@ type fp_mmitest_proc, fs_type, proc_type;
 type vendor_camera_dump_file, file_type, data_file_type;
 # End added by juting.huang for cameraalgoservice porting
 
+#mmitest need
+type vendor_mmitest_sysfs,proc_type, fs_type, sysfs_type, mlstrustedobject;
+

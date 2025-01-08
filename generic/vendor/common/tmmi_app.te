@@ -1,0 +1,17 @@
+type tmmi_app, domain;
+
+unix_socket_connect(tmmi_app, tctd, tctd);
+
+allow tmmi_app vendor_sysfs_graphics:dir { search };
+allow tmmi_app vendor_sysfs_graphics:file rw_file_perms;
+allow tmmi_app vendor_sysfs_usb_supply:dir { search };
+allow tmmi_app vendor_sysfs_usb_supply:file rw_file_perms;
+allow tmmi_app vendor_sysfs_usb_controller:dir { search };
+allow tmmi_app vendor_sysfs_usb_controller:file rw_file_perms;
+set_prop(tmmi_app, vendor_sensors_prop)
+set_prop(tmmi_app, vendor_camera_prop)
+set_prop(tmmi_app, vendor_audio_prop)
+
+allow tmmi_app tctd_socket:sock_file { write };
+allow tmmi_app vendor_sysfs_battery_supply:dir { search };
+get_prop(tmmi_app, vendor_display_prop)
