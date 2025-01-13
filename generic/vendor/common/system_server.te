@@ -105,3 +105,5 @@ allow system_server vendor_mmitest_sysfs:dir { search };
 allow system_server vendor_mmitest_sysfs:file { read getattr open write };
 allow system_server vendor_mmitest_sysfs:file { rw_file_perms };
 allow system_server vendor_sysfs_usb_controller:file { rw_file_perms };
+allow system_server fp_mmitest_sysfs:file { rw_file_perms };
+allow system_server fp_mmitest_sysfs:dir { search open read };
