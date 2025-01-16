@@ -34,3 +34,6 @@ allow hal_camera_default vendor_dmabuf_display_heap_device:chr_file r_file_perms
 allow hal_camera_default vendor_vm_cp_non_pixel_device:chr_file r_file_perms;
 allow hal_camera_default vendor_vm_cp_pixel_device:chr_file r_file_perms;
 
+
+allow hal_camera_default mnt_vendor_file:dir { search write add_name };
+allow hal_camera_default mnt_vendor_file:file { read write create open setattr getattr };
