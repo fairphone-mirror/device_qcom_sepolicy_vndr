@@ -37,6 +37,9 @@
 # Access firmware_file
 r_dir_file(kernel, firmware_file)
 
+# for AW882xx
+#allow kernel vendor_persist_aw_cali_file:file create_file_perms;
+#allow kernel vendor_persist_aw_cali_file:dir create_dir_perms;
 
 # access vendor_firmware_file
 r_dir_file(kernel, vendor_firmware_file)
