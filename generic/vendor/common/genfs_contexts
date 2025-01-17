@@ -196,6 +196,8 @@ genfscon sysfs /module/rmnet_wlan/parameters u:object_r:vendor_sysfs_rmnet:s0
 
 genfscon sysfs /kernel/camera/subparts_info u:object_r:vendor_sysfs_camera:s0
 
+genfscon tracefs /instances/kgsl-fence u:object_r:vendor_debugfs_kgsl_fence_tracing:s0
+
 genfscon sysfs /kernel/qts/primary/trusted_touch_enable u:object_r:vendor_sysfs_trusted_touch_enable:s0
 genfscon sysfs /kernel/qts/secondary/trusted_touch_enable u:object_r:vendor_sysfs_trusted_touch_enable:s0
 
