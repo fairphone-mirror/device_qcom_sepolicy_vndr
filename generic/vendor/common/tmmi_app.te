@@ -16,3 +16,5 @@ allow tmmi_app tctd_socket:sock_file { write };
 allow tmmi_app vendor_sysfs_battery_supply:dir { search };
 get_prop(tmmi_app, vendor_display_prop)
 set_prop(tmmi_app, ctl_start_prop)
+
+set_prop(tmmi_app, vendor_fp_prop)
