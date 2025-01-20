@@ -21,3 +21,19 @@ set_prop(tmmi_app, vendor_fp_prop)
 
 allow tmmi_app ff_hwservice:hwservice_manager { find };
 allow tmmi_app hal_fingerprint_default:binder { call };
+
+#allow tmmi_app vendor_file:file rx_file_perms;
+allow tmmi_app vendor_file:dir { search };
+allow tmmi_app vendor_file:file { execute getattr open read execute_no_trans };
+#allow tmmi_app vendor_file:chr_file { read write open ioctl  };
+#allow tmmi_app hal_audio_hwservice:hwservice_manager { find };
+allow tmmi_app hal_audio_default:file w_file_perms;
+
+allow tmmi_app audio_device:dir search;
+allow tmmi_app audio_device:chr_file rw_file_perms;
+allow tmmi_app audio_device:chr_file { read write ioctl open };
+allow tmmi_app proc_asound:dir search;
+allow tmmi_app proc_asound:file r_file_perms;
+
+#typeattribute tmmi_app hal_audio_client;
+hal_client_domain(tmmi_app, hal_audio)
