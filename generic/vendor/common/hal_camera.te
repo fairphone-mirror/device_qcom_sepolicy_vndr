@@ -70,7 +70,8 @@ get_prop(hal_camera, vendor_adsprpc_prop)
 allow hal_camera_default gpu_device:chr_file rw_file_perms;
 
 # Postproc Service
-hal_attribute_hwservice(hal_camera, vendor_hal_camera_postproc_hwservice);
+# hal_attribute_hwservice(hal_camera, vendor_hal_camera_postproc_hwservice);
+hal_server_domain(hal_camera_default, hal_ispenc)
 
 # AON Service
 hal_attribute_hwservice(hal_camera, vendor_hal_camera_aon_hwservice);

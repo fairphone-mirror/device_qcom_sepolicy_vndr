@@ -28,3 +28,8 @@
 attribute vendor_qmcs_file_type;
 # vendor halserver
 attribute vendor_halserverdomain;
+
+# camerapostproc service
+attribute hal_ispenc;
+attribute hal_ispenc_client;
+attribute hal_ispenc_server;
