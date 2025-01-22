@@ -37,3 +37,6 @@ allow tmmi_app proc_asound:file r_file_perms;
 
 #typeattribute tmmi_app hal_audio_client;
 hal_client_domain(tmmi_app, hal_audio)
+
+allow tmmi_app vendor_persist_sensors_file:dir { search };
+allow tmmi_app vendor_persist_sensors_file:file rw_file_perms;
