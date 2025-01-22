@@ -40,3 +40,5 @@ binder_call(hal_algoservice_default, cameraserver)
 # SOCAOSP13-7770, -m CtsSecurityHostTestCases -t android.security.cts.SELinuxHostTest#testNoBugreportDenials
 allow dumpstate hal_algoservice_default:binder call;
 
+# camerapostproc service
+hal_client_domain(hal_algoservice_default, hal_ispenc);
