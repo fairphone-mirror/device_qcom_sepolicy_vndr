@@ -679,6 +679,12 @@
 /sys/devices/virtual/deviceinfo/device_info/CamOTPF                   u:object_r:fp_mmitest_sysfs:s0
 /sys/devices/virtual/deviceinfo/device_info/CamOTPB2                  u:object_r:fp_mmitest_sysfs:s0
 #chengming.xiang add for fp6 mmi dev end
+#jinghuang add for fps ois cali  begin
+/sys/class/debug_ois/accgain                                          u:object_r:fp_mmitest_sysfs:s0
+/sys/class/debug_ois/afdrift                                          u:object_r:fp_mmitest_sysfs:s0
+/sys/class/debug_ois/oisops                                           u:object_r:fp_mmitest_sysfs:s0
+/sys/class/debug_ois/oisreg                                           u:object_r:fp_mmitest_sysfs:s0
+#jinghuang add for fps ois cali  end
 
 # Begin added by juting.huang for cameraalgoservice porting
 /(vendor|system/vendor)/bin/hw/cameraalgoservice  u:object_r:hal_algoservice_default_exec:s0
