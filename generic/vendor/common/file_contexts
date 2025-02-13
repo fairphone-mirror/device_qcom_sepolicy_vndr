@@ -690,7 +690,10 @@
 /data/vendor/camera_dump(/.*)? u:object_r:vendor_camera_dump_file:s0
 # End added by juting.huang for cameraalgoservice porting
 
-
+# dali@tcl.com add for motion mode begin
+/vendor/lib(64)?/libTclImage_ImageEngine\.so                          u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libc\+\+_shared\.so                                  u:object_r:same_process_hal_file:s0
+# dali@tcl.com add for motion mode end
 #MMITest usb
 /sys/class/qcom-battery/typec_cc_orientation                  u:object_r:fp_mmitest_sysfs:s0
 /sys/class/udc/a600000.dwc3/current_speed                  u:object_r:fp_mmitest_sysfs:s0
