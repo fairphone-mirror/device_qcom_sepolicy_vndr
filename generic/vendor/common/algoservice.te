@@ -34,6 +34,7 @@ allow hal_algoservice_default vendor_camera_data_file:dir search;
 get_prop(hal_algoservice_default, vendor_default_prop)
 get_prop(hal_algoservice_default, camera_config_prop)
 get_prop(hal_algoservice_default, vendor_camera_prop)
+get_prop(hal_algoservice_default, vendor_fp_prop)
 set_prop(hal_algoservice_default, vendor_camera_prop)
 
 binder_call(hal_algoservice_default, system_server)
