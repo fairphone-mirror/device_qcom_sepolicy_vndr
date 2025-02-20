@@ -704,3 +704,10 @@
 
 #MMMITest TP
 /sys/devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a80000.spi/spi_master/spi0/spi0.0/fw_version			u:object_r:fp_mmitest_sysfs:s0
+/sys/devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a80000.spi/spi_master/spi0/spi0.0/write_device_message			u:object_r:fp_mmitest_sysfs:s0
+/sys/devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a80000.spi/spi_master/spi0/spi0.0(/.*)?			u:object_r:fp_mmitest_sysfs:s0
+/sys/bus/spi/drivers/eswin_eph861x(/.*)?	u:object_r:fp_mmitest_sysfs:s0	
+
+
+#MMITest download_mode
+/sys/module/qcom_dload_mode/parameters/download_mode		u:object_r:fp_mmitest_sysfs:s0
