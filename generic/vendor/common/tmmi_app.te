@@ -43,3 +43,4 @@ allow tmmi_app vendor_persist_sensors_file:file rw_file_perms;
 
 allow tmmi_app fp_mmitest_sysfs:file { rw_file_perms };
 allow tmmi_app fp_mmitest_sysfs:dir { search open read };
+get_prop(tmmi_app, vendor_nfc_prop)
