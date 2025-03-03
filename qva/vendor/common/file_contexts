@@ -317,3 +317,6 @@
 
 ###[ADD][EMKIT]### SystemInformation
 /sys/emkit/info(/.*)?                           u:object_r:vendor_sysfs_info:s0
+
+/sys/devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:49476/model                           u:object_r:vendor_sysfs_info:s0
+/sys/devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:49476/vendor                           u:object_r:vendor_sysfs_info:s0
