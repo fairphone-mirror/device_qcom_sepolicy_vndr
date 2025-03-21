@@ -720,5 +720,4 @@
 
 #MMITest download_mode
 /sys/module/qcom_dload_mode/parameters/download_mode		u:object_r:fp_mmitest_sysfs:s0
-
-
+/sys/bus/platform/drivers/gpio-keys/soc:gpio_keys/switch_state        u:object_r:fp_mmitest_sysfs:s0
