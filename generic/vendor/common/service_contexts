@@ -78,3 +78,6 @@ vendor.qti.hardware.trustedui.ITrustedInput/default                   u:object_r
 # Begin added by juting.huang for cameraalgoservice porting
 vendor.tcl.camera.algoservice.ITctCameraAlgoService/default    u:object_r:vendor_tct_camera_algo_service:s0
 # End added by juting.huang for cameraalgoservice porting
+
+vendor.qti.hardware.dsp.IDspService/default                           u:object_r:vendor_hal_dspmanager_aidlservice:s0
+

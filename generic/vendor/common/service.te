@@ -57,3 +57,6 @@ type vendor_hal_trustedui_aidl_service, hal_service_type, protected_service, ser
 # Begin added by juting.huang for cameraalgoservice porting
 type vendor_tct_camera_algo_service, hal_service_type, protected_service, service_manager_type;
 # End added by juting.huang for cameraalgoservice porting
+
+type vendor_hal_dspmanager_aidlservice, hal_service_type, service_manager_type;
+
