@@ -49,3 +49,6 @@ allow system_app vendor_qdss_device:chr_file { open read };
 allow system_app fp_mmitest_sysfs:file { rw_file_perms };
 allow system_app fp_mmitest_sysfs:dir { search open read };
 #chengming.xiang add for fp6 mmi dev end
+
+#fingerprint
+allow system_app hal_fingerprint_default:binder { call };
