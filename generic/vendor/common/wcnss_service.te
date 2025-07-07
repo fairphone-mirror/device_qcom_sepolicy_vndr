@@ -63,16 +63,12 @@ allow vendor_wcnss_service proc_net:file getattr;
 
 allow vendor_wcnss_service vendor_sysfs_data:file r_file_perms;
 # pkt logging for cnss_diag
-userdebug_or_eng(`
-  r_dir_file(vendor_wcnss_service, vendor_proc_wifi_dbg)
-  r_dir_file(vendor_wcnss_service, vendor_sysfs_diag)
-')
+r_dir_file(vendor_wcnss_service, vendor_proc_wifi_dbg)
+r_dir_file(vendor_wcnss_service, vendor_sysfs_diag)
 
-userdebug_or_eng(`
 allow vendor_wcnss_service vendor_wifi_vendor_log_data_file:dir create_dir_perms;
 allow vendor_wcnss_service vendor_wifi_vendor_log_data_file:file create_file_perms;
 # This is needed for ptt_socket_app to write logs file collected to sdcard
 r_dir_file(vendor_wcnss_service, storage_file)
 r_dir_file(vendor_wcnss_service, mnt_user_file)
-')
 
