@@ -719,6 +719,7 @@
 /sys/bus/spi/drivers/eswin_eph861x(/.*)?	u:object_r:fp_mmitest_sysfs:s0	
 
 /sys/devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a80000.spi/spi_master/spi0/spi0.0/wakeup(/.*)?  u:object_r:sysfs_wakeup:s0
+/sys/devices/virtual/hall_switch/soc:hall_1/hall_status            u:object_r:fp_mmitest_sysfs:s0           
 
 
 #MMITest download_mode
