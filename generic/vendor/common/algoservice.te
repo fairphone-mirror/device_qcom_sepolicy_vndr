@@ -54,3 +54,8 @@ allow hal_algoservice_default vendor_hal_dspmanager_hwservice:hwservice_manager 
 hal_client_domain(hal_algoservice_default, vendor_hal_dspmanager)
 allow hal_algoservice_default vendor_hal_qspmhal_service:service_manager find;
 hal_client_domain(hal_algoservice_default, vendor_hal_qspmhal)
+
+#start algoservice cache and model
+allow hal_algoservice_default hal_algoservice_data_file:file rw_file_perms;
+allow hal_algoservice_default hal_algoservice_data_file:dir create_dir_perms;
+#end

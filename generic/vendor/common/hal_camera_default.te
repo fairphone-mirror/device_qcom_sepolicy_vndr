@@ -39,3 +39,7 @@ allow hal_camera_default vendor_tct_camera_algo_service:service_manager find;
 binder_call(hal_camera_default, hal_algoservice_default)
 #End added by juting.huang for cameraalgoservice
 
+#start algoservice cache and model
+allow hal_camera_default hal_algoservice_data_file:file rw_file_perms;
+allow hal_camera_default hal_algoservice_data_file:dir create_dir_perms;
+#end

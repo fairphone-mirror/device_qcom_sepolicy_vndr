@@ -712,6 +712,9 @@
 # camerapostproc service
 /vendor/lib(64)?/vendor.qti.hardware.camera.postproc@1.0\.so          u:object_r:same_process_hal_file:s0
 
+# algoservice cache and model
+/data/vendor/algoservice(/.*)?                 u:object_r:hal_algoservice_data_file:s0
+
 #MMMITest TP
 /sys/devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a80000.spi/spi_master/spi0/spi0.0/fw_version			u:object_r:fp_mmitest_sysfs:s0
 /sys/devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a80000.spi/spi_master/spi0/spi0.0/write_device_message			u:object_r:fp_mmitest_sysfs:s0
